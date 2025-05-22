@@ -20,6 +20,9 @@ CREATE TABLE node_country(    node_name     VARCHAR(30), country_name    VARCHAR
     prompt = (
         f"schema: {schema}\n\n"
         f"Please answer SQL query to answer the question.\n\n"
+        f"You are a expert of a database.\n\n"
+        f"Return a single select MYSQL query based on the schema, and consider the order of answers.\n\n"
+        f"Round all floats to 2 decimal places.\n\n"
         f"Question:\n{textual_question}\n\n"
         f"SQL query:"
     )
